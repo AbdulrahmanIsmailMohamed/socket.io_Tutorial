@@ -8,8 +8,8 @@
     <title>Socket.Io</title>
   </head>
   <body>
-      <input type="text" class="message" />
-      <button onclick="message()">Click</button>
+    <input type="text" class="message" />
+    <button onclick="message()">Click</button>
     <h1></h1>
     <script>
       const socket = io();
@@ -22,6 +22,29 @@
       socket.on("message", (data) => {
         document.querySelector("h1").innerHTML = data;
       });
+
+      socket.on("serverEvent", (data) => {
+        console.log(data);
+      });
+
+      // count users connections
+      socket.on("broadcast", (data) => {
+        console.log(data.description);
+        alert(data.description);
+      });
+      // =====================
+      // name space
+      // const socket = io("/name-space");
+      // socket.on("hi", (data) => {
+      //   document.body.innerText = data;
+      // });
+      // =========================
+      // join to room
+      // const socket = io("/joinRoom");
+      // socket.on("connectToRoom",(data)=>{
+      //   console.log(data);
+      // })
+
     </script>
   </body>
 </html>
