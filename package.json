@@ -1,0 +1,16 @@
+{
+  "name": "soket.io",
+  "version": "1.0.0",
+  "description": "Socket.Io Tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abdulrahman Ismail",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1"
+  }
+}
